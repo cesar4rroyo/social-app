@@ -29,15 +29,23 @@ const store = createStore(
         reduxFirestore(firebase, fbConfig)
     )
 );
+const profileSpecificProps = {
+    userProfile: "users",
+    useFirestoreForProfile: true,
+    enableRedirectHandling: false,
+    resetBeforeLogin: false,
+};
 const rrfProps = {
     firebase,
     config: fbConfig,
+    config: profileSpecificProps,
     dispatch: store.dispatch,
     createFirestoreInstance,
     userProfile: "users", // where profiles are stored in database
     presence: "presence", // where list of online users is stored in database
     sessions: "sessions",
 };
+
 function AuthIsLoaded({ children }) {
     const auth = useSelector((state) => state.firebase.auth);
     if (!isLoaded(auth)) return <div>Loading Screen...</div>;
