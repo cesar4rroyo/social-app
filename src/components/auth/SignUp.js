@@ -24,9 +24,34 @@ class SignUp extends Component {
         const { auth, authError } = this.props;
         if (auth.uid) return <Redirect to="/" />;
         return (
-            <div className="container">
-                <form onSubmit={this.handleSubmit} className="white">
-                    <h5 className="grey-text text-darken-3">Sig In</h5>
+            <div className="container fondo">
+                <form
+                    onSubmit={this.handleSubmit}
+                    className="text-center h4 mb-4 "
+                >
+                    <h5 className="h4 mb-4 center">Sig In</h5>
+                    <div class="form-row">
+                        <div class="col">
+                            <div className="input-field">
+                                <label htmlFor="firstName">First Name</label>
+                                <input
+                                    type="text"
+                                    id="firstName"
+                                    onChange={this.handleChange}
+                                />
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div className="input-field">
+                                <label htmlFor="lastName">Last Name</label>
+                                <input
+                                    type="text"
+                                    id="lastName"
+                                    onChange={this.handleChange}
+                                />
+                            </div>
+                        </div>
+                    </div>
                     <div className="input-field">
                         <label htmlFor="email">Email</label>
                         <input
@@ -44,23 +69,7 @@ class SignUp extends Component {
                         />
                     </div>
                     <div className="input-field">
-                        <label htmlFor="firstName">First Name</label>
-                        <input
-                            type="text"
-                            id="firstName"
-                            onChange={this.handleChange}
-                        />
-                    </div>
-                    <div className="input-field">
-                        <label htmlFor="lastName">Last Name</label>
-                        <input
-                            type="text"
-                            id="lastName"
-                            onChange={this.handleChange}
-                        />
-                    </div>
-                    <div className="input-field">
-                        <button className="btn pink lighten-1 z-depth-0">
+                        <button className="btn btn-success h4 btn-block">
                             Sign Up
                         </button>
                         <div className="red-text center">

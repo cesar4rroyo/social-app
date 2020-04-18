@@ -14,11 +14,17 @@ const Navbar = (props) => {
     );
 
     return (
-        <nav className="nav-wrapper grey darken-3">
+        <nav className="navbar fixed-top navbar-light colorNav">
             <div className="container">
-                <Link to="/" className="brand-logo">
-                    Social App
+                <Link to="/" className="navbar-brand">
+                    <img
+                        className="icon d-inline-block align-top"
+                        src="iconApp.png"
+                        alt=""
+                    />{" "}
+                    <span className="navTitle">Your Notes</span>
                 </Link>
+
                 {links}
             </div>
         </nav>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import { signIn } from "../../store/actions/authActions";
 import { Redirect } from "react-router-dom";
 
@@ -22,9 +23,9 @@ class SignIn extends Component {
         const { authError, auth } = this.props;
         if (auth.uid) return <Redirect to="/" />;
         return (
-            <div className="container">
-                <form onSubmit={this.handleSubmit} className="white">
-                    <h5 className="grey-text text-darken-3">Sig In</h5>
+            <div className="container fondo">
+                <form onSubmit={this.handleSubmit} className="h4 mb-4">
+                    <h5 className="h4 mb-4 center">Log-in to your account</h5>
                     <div className="input-field">
                         <label htmlFor="email">Email</label>
                         <input
@@ -42,9 +43,12 @@ class SignIn extends Component {
                         />
                     </div>
                     <div className="input-field">
-                        <button className="btn pink lighten-1 z-depth-0">
+                        <button className="btn btn-success h4 btn-block">
                             Login
                         </button>
+                        <h6 className="center">
+                            Not a member? <Link to="/signup">Register</Link>
+                        </h6>
                         <div className="red-text center">
                             {authError ? <p>{authError}</p> : null}
                         </div>
