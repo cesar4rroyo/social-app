@@ -3,9 +3,20 @@ import moment from "moment";
 
 const ProjectSummary = ({ project }) => {
     return (
-        <div className="card z-depth-0 project-summary">
-            <div className="card-content grey-text text-darken-3">
-                <span className="card-title">{project.title}</span>
+        <div className="card testimonial-card">
+            <div class="card-up"></div>
+            <div class="avatar mx-auto white">
+                <img
+                    src="https://www.sairv.org/wp-content/uploads/2019/07/PERFIL-VACIO.png"
+                    height="200px"
+                    class="rounded-circle pt-2"
+                    alt="woman avatar"
+                />
+            </div>
+            <div className="card-body">
+                <h4 className="textCard">
+                    <i class="fas fa-quote-left"></i> {project.title}
+                </h4>
                 <p>
                     Posted by {project.authorFirstName} {project.authorLastName}{" "}
                 </p>

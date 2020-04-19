@@ -7,6 +7,7 @@ body {
   height: 100vh;
   width: 100%;
   background-image: linear-gradient(to bottom, #550a35, #501240, #491a4b, #3f2154, #31285b, #263264, #173b6a, #00446f, #005274, #006076, #196c75, #397874);
+  background-attachment: fixed;
 }
 
 code {
@@ -33,6 +34,8 @@ code {
 
 .navTitle {
   color: white;
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
 }
 
 .navbar {
@@ -42,4 +45,53 @@ code {
 
 .input-field {
   margin-top: 0;
+}
+
+.dashboard {
+  padding-top: 6rem;
+}
+
+.card-up {
+  height: 50px;
+  background-color: black;
+}
+
+.alto {
+  margin-top: 6rem;
+}
+
+.cardImg {
+  width: 120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.textCard {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.5rem;
+}
+
+.titleDiv {
+  border-bottom: 1px dashed black;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  padding-bottom: 4px;
+}
+
+.textInput {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.formRound {
+  border-radius: 40px;
+}
+
+.btnCreate {
+  background-color: #00C851;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
