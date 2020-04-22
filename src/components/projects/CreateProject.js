@@ -38,6 +38,8 @@ class CreateProject extends Component {
         );
     }
     render() {
+        console.log(this.props);
+
         const { auth } = this.props;
         if (!auth.uid) return <Redirect to="/signin" />;
 
@@ -70,7 +72,8 @@ class CreateProject extends Component {
                             </div>
                             <div className="input-field">
                                 <button className="btnCreate">
-                                    Add Note <i class="fas fa-plus-circle"></i>
+                                    Add Note{" "}
+                                    <i className="fas fa-plus-circle"></i>
                                 </button>
                                 <br />
                                 {this.state.error ? this.errorMessage() : null}
@@ -96,7 +99,7 @@ class CreateProject extends Component {
                                 )}
                             </div>
                             <div className="card-body">
-                                <i class="fas fa-quote-left"></i>{" "}
+                                <i className="fas fa-quote-left"></i>{" "}
                                 {this.state.change ? (
                                     <p className="textCard">
                                         {this.state.content}

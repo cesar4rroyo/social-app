@@ -16,7 +16,7 @@ const ProjectDetails = (props) => {
                     <div className="card-content">
                         <span className="card-title">{project.title}</span>
                         <p>
-                            <i class="fas fa-quote-left"></i>
+                            <i className="fas fa-quote-left"></i>
                             {project.content}
                         </p>
                     </div>

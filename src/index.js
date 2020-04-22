@@ -14,7 +14,7 @@ import {
 } from "redux-firestore";
 import {
     getFirebase,
-    reactReduxFirebase,
+    // reactReduxFirebase,
     ReactReduxFirebaseProvider,
 } from "react-redux-firebase";
 import fbConfig from "./config/fbConfig";

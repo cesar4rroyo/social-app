@@ -30,8 +30,8 @@ class SignUp extends Component {
                     className="text-center h4 mb-4 "
                 >
                     <h5 className="h4 mb-4 center">Sig In</h5>
-                    <div class="form-row">
-                        <div class="col">
+                    <div className="form-row">
+                        <div className="col">
                             <div className="input-field">
                                 <label htmlFor="firstName">First Name</label>
                                 <input

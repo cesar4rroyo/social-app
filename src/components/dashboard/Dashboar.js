@@ -5,7 +5,7 @@ import ProjectList from "../projects/ProjectList";
 import { connect } from "react-redux";
 import { firestoreConnect } from "react-redux-firebase";
 import { compose } from "redux";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 
 class Dashboard extends Component {
     render() {
@@ -22,6 +22,9 @@ class Dashboard extends Component {
                         <Notifications notifications={notifications} />
                     </div>
                 </div>
+                <Link to="/create">
+                    <i className="fas fa-plus-circle" id="add_project"></i>
+                </Link>
             </div>
         );
     }

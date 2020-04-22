@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import SignedInLinks from "./SignedInLinks";
 import SignedOutLinks from "./SignedOutLinks";
 import { connect } from "react-redux";
+export const btnBurger = document.getElementById("menu");
 
 const Navbar = (props) => {
     const { auth, profile } = props;
-    // console.log(props);
     const links = auth.uid ? (
         <SignedInLinks profile={profile} />
     ) : (
@@ -14,13 +14,13 @@ const Navbar = (props) => {
     );
 
     return (
-        <nav className="navbar fixed-top navbar-light colorNav">
+        <nav className="navbar colorNav">
             <div className="container">
                 <Link to="/" className="navbar-brand">
                     <img
                         className="icon d-inline-block align-top"
                         src="iconApp.png"
-                        alt=""
+                        alt="profile"
                     />{" "}
                     <span className="navTitle">Your Notes</span>
                 </Link>
@@ -31,7 +31,7 @@ const Navbar = (props) => {
     );
 };
 const mapStateToProps = (state) => {
-    console.log(state);
+    // console.log(state);
 
     return {
         auth: state.firebase.auth,

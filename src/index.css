@@ -1,97 +1,245 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  height: 100vh;
-  width: 100%;
-  background-image: linear-gradient(to bottom, #550a35, #501240, #491a4b, #3f2154, #31285b, #263264, #173b6a, #00446f, #005274, #006076, #196c75, #397874);
-  background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient( to bottom, #550a35, #501240, #491a4b, #3f2154, #31285b, #263264, #173b6a, #00446f, #005274, #006076, #196c75, #397874);
+    background-attachment: fixed;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 .fondo {
-  background-color: white;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 7rem;
-  padding: 3rem 2rem 2rem 2rem;
-  width: 80vh;
-  border-radius: 16px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7rem;
+    padding: 3rem 2rem 2rem 2rem;
+    width: 80vh;
+    border-radius: 16px;
 }
 
 .colorNav {
-  background-color: rgb(0, 0, 0, 0.45);
+    background-color: rgb(0, 0, 0, 0.45);
 }
 
 .icon {
-  height: 60px;
+    height: 60px;
 }
 
 .navTitle {
-  color: white;
-  font-family: 'Pacifico', cursive;
-  font-size: 2rem;
+    color: white;
+    font-family: "Pacifico", cursive;
+    font-size: 2rem;
 }
 
 .navbar {
-  padding: 0;
-  height: 70px;
+    padding: 0;
+    height: 70px;
 }
 
 .input-field {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .dashboard {
-  padding-top: 6rem;
+    padding-top: 0rem;
 }
 
 .card-up {
-  height: 50px;
-  background-color: black;
+    height: 7px;
+    background-color: orange;
 }
 
 .alto {
-  margin-top: 6rem;
+    margin-top: 4rem;
 }
 
 .cardImg {
-  width: 120px;
-  margin-left: auto;
-  margin-right: auto;
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .textCard {
-  font-family: 'Pacifico', cursive;
-  font-size: 1.5rem;
+    font-family: "Pacifico", cursive;
+    font-size: 1.5rem;
+}
+
+.list_footer {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+}
+
+.fa-heart {
+    color: red;
+}
+
+.orange-text {
+    margin-left: 1rem;
+}
+
+.card_footer {
+    background-color: #F1F5F8;
+    padding-top: 10px;
+}
+
+.userCard {
+    background-color: skyblue;
+    color: white;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 10px;
+}
+
+/* Notification and Notifications styles */
+
+.containerNotifications {
+    border-radius: 20px;
+}
+
+.titleNotifications {
+    font-family: "Anton", sans-serif;
+}
+
+.notificationTitle {
+    font-family: "Pacifico", cursive;
+    font-size: 1rem;
+}
+
+.notificationContent {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* End Notification and Notifications styles */
+
+.userName {
+    font-weight: bold;
 }
 
 .titleDiv {
-  border-bottom: 1px dashed black;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-  padding-bottom: 4px;
+    border-bottom: 1px dashed black;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    padding-bottom: 4px;
 }
 
 .textInput {
-  font-family: 'Anton', sans-serif;
-  font-size: 1.6rem;
-  text-transform: uppercase;
+    font-family: "Anton", sans-serif;
+    font-size: 1.6rem;
+    text-transform: uppercase;
 }
 
 .formRound {
-  border-radius: 40px;
+    border-radius: 40px;
 }
 
 .btnCreate {
-  background-color: #00C851;
-  font-size: 14px;
-  padding: 10px;
-  border-radius: 20px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #00c851;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 20px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.btn-circle {
+    width: 45px;
+    height: 45px;
+    padding: 9px 9px;
+    border-radius: 22.5px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 2.142855‬;
+}
+
+#add_project {
+    display: none;
+}
+
+/* boton del profile */
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.navbar .dropdown-menu {
+    width: 100px;
+    text-align: center;
+    position: absolute !important;
+    right: 4rem !important;
+    height: 60px;
+    /* background-color: ; */
+}
+
+.dropdown-menu {
+    left: initial;
+    padding: 0;
+}
+
+.toast-container {
+    box-shadow: 3px 3px 5px 6px #ccc;
+    margin-top: 1rem;
+}
+
+@media (min-width: 320px) and (max-width: 501px) {
+    .navTitle {
+        font-size: 1.5rem;
+    }
+    .icon {
+        height: 50px;
+    }
+    .fondo {
+        width: initial;
+    }
+    .no_show {
+        display: none;
+    }
+    .navbar .dropdown-menu {
+        right: 0rem !important;
+    }
+    #add_project {
+        display: inline;
+        position: fixed;
+        top: 18rem;
+        right: 1rem;
+        z-index: 4;
+        color: yellow;
+        font-size: 45px;
+    }
+    .dashboard {
+        padding-top: 0rem;
+    }
+    #profile_circle {
+        position: absolute;
+        z-index: 3;
+        right: 1.5rem;
+        top: 0.7rem;
+    }
+    /* .itens {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(24, 97, 147, 0.75);
+        top: 0px;
+        left: -100%;
+        transition: all 0.5s;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-family: "Baloo Paaji 2", cursive;
+        font-size: 2rem;
+    }
+    .itens li {
+        padding-top: 8rem;
+    }
+    .itens.is_active {
+        left: 0;
+    } */
 }
