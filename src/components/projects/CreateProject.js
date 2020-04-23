@@ -81,7 +81,7 @@ class CreateProject extends Component {
                         </form>
                     </div>
                     <div className="col-4">
-                        <div className="card formRound">
+                        <div className="card">
                             <img
                                 src="iconApp.png"
                                 alt="cardImg"

@@ -11,23 +11,52 @@ const ProjectDetails = (props) => {
     if (!auth.uid) return <Redirect to="/signin" />;
     if (project) {
         return (
-            <div className="container section project-details">
-                <div className="card alto">
-                    <div className="card-content">
-                        <span className="card-title">{project.title}</span>
-                        <p>
-                            <i className="fas fa-quote-left"></i>
-                            {project.content}
-                        </p>
+            <div className="container pt-5">
+                <div className="card testimonial-card">
+                    <div className="card-up"></div>
+                    <div className="row">
+                        <div className="col-8">
+                            <div className="card-body">
+                                <h4 className="center dashborder letraTitleCard">
+                                    {project.title}
+                                </h4>
+                                <h4 className="textCard letraContentCard">
+                                    <i className="fas fa-quote-left"></i>{" "}
+                                    {project.content}
+                                </h4>
+                            </div>
+                            <spam className="orange-text">
+                                <i className="far fa-clock"></i>{" "}
+                                {moment(project.createAt.toDate()).calendar()}
+                            </spam>
+                        </div>
+                        <div className="col-4 center pt-4">
+                            <div className="avatarCard">
+                                <img
+                                    src="https://www.sairv.org/wp-content/uploads/2019/07/PERFIL-VACIO.png"
+                                    height="50px"
+                                    className="rounded-circle pt-2"
+                                    alt="avatar"
+                                />
+
+                                <div className="pt-2">
+                                    <span className="userCard">
+                                        {project.authorFirstName}{" "}
+                                        {project.authorLastName}{" "}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="card-action gret lighten-4 grey-text">
-                        <div>
-                            Posted by {project.authorFirstName}{" "}
-                            {project.authorLastName}
-                        </div>
-                        <div>
-                            {moment(project.createAt.toDate()).calendar()}
-                        </div>
+                    <div className="card_footer">
+                        <ul className="list_footer">
+                            <li>
+                                <i className="fas fa-heart"></i>
+                            </li>
+                            <li>
+                                <i className="fas fa-comment"></i>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
