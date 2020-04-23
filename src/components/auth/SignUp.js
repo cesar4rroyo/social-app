@@ -41,7 +41,7 @@ class SignUp extends Component {
                                 />
                             </div>
                         </div>
-                        <div class="col">
+                        <div className="col">
                             <div className="input-field">
                                 <label htmlFor="lastName">Last Name</label>
                                 <input

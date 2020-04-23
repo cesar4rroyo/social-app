@@ -25,10 +25,10 @@ const ProjectDetails = (props) => {
                                     {project.content}
                                 </h4>
                             </div>
-                            <spam className="orange-text">
+                            <span className="orange-text">
                                 <i className="far fa-clock"></i>{" "}
                                 {moment(project.createAt.toDate()).calendar()}
-                            </spam>
+                            </span>
                         </div>
                         <div className="col-4 center pt-4">
                             <div className="avatarCard">

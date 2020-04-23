@@ -18,10 +18,14 @@ const SignedInLinks = (props) => {
         <div>
             <ul className="right letraLinks">
                 <li className="no_show">
-                    <NavLink to="/create">New Project</NavLink>
+                    <NavLink to="/create">
+                        <span className="hoverNav">New Project</span>
+                    </NavLink>
                 </li>
                 <li className="no_show">
-                    <a onClick={props.signOut}>Log Out</a>
+                    <a onClick={props.signOut}>
+                        <span className="hoverNav">Log Out</span>
+                    </a>
                 </li>
                 <li id="profile_circle">
                     <NavLink

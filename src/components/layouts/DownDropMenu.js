@@ -12,9 +12,9 @@ const DownDropMenu = (props) => {
                         </a>
                     </li>
                     <li>
-                        <NavLink to="/">
+                        <a>
                             <i class="fas fa-cog"></i> Settings
-                        </NavLink>
+                        </a>
                     </li>
                 </ul>
             </div>
