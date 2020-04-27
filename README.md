@@ -1,3 +1,7 @@
+To use: 
+user: test1@hotmail.com
+pass: 123456
+
 <<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
