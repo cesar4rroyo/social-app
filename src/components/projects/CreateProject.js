@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { createProject } from "../../store/actions/projectActions";
 import { Redirect } from "react-router-dom";
+import swal from "sweetalert";
 
 class CreateProject extends Component {
     state = {
@@ -11,7 +12,18 @@ class CreateProject extends Component {
         content2: "Try to write something... :)",
         change: false,
         error: false,
+        create: false,
+        like: false,
     };
+    confirmMsg() {
+        swal({
+            title: "Good job!",
+            text: "Your note have been published",
+            icon: "success",
+            button: "Good!",
+        });
+    }
+
     handleChange = (e) => {
         this.setState({ change: true });
         this.setState({
@@ -71,7 +83,10 @@ class CreateProject extends Component {
                                 ></textarea>
                             </div>
                             <div className="input-field">
-                                <button className="btnCreate">
+                                <button
+                                    onClick={this.confirmMsg}
+                                    className="btnCreate"
+                                >
                                     Add Note{" "}
                                     <i className="fas fa-plus-circle"></i>
                                 </button>

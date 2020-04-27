@@ -1,9 +1,5 @@
 const initState = {
-    projects: [
-        { id: "1", title: "i want you", content: "ha ha ha" },
-        { id: "2", title: "i love you", content: "ha ha ha" },
-        { id: "3", title: "i miss you", content: "ha ha ha" },
-    ],
+    projects: [],
 };
 const projectReducer = (state = initState, action) => {
     switch (action.type) {
@@ -12,6 +8,30 @@ const projectReducer = (state = initState, action) => {
             return state;
         case "CREATE_PROJECT_ERROR":
             console.log("creaye project error", action.err);
+            return state;
+        case "DELETE_PROJECT":
+            console.log("project deleted");
+            return state;
+        case "DELETE_PROJECT_ERROR":
+            console.log(
+                "delete project error",
+                "state: ",
+                state,
+                "action: ",
+                action.project
+            );
+            return state;
+        case "LIKE_PROJECT":
+            console.log("project like");
+            return state;
+        case "LIKE_PROJECT_ERROR":
+            console.log("project error", action.err);
+            return state;
+        case "DIS_LIKE_PROJECT":
+            console.log("project dislike");
+            return state;
+        case "DIS_LIKE_PROJECT_ERROR":
+            console.log("projectdislike error", action.err);
             return state;
         default:
             return state;

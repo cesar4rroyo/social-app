@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
 const DownDropMenu = (props) => {
     if (props.isOpen) {
@@ -13,7 +12,7 @@ const DownDropMenu = (props) => {
                     </li>
                     <li>
                         <a>
-                            <i class="fas fa-cog"></i> Settings
+                            <i className="fas fa-cog"></i> Settings
                         </a>
                     </li>
                 </ul>

@@ -21,3 +21,53 @@ export const createProject = (project) => {
             });
     };
 };
+export const likeProject = (id) => {
+    return (dispatch, getState, { getFirebase, getFirestore }) => {
+        const firestore = getFirestore();
+        firestore
+            .collection("projects")
+            .doc(id)
+            .update({
+                like: true,
+            })
+            .then(() => {
+                dispatch({ type: "LIKE_PROJECT", id });
+            })
+            .catch((err) => {
+                dispatch({ type: "LIKE_PROJECT_ERROR", err });
+            });
+    };
+};
+export const disLikeProject = (id) => {
+    return (dispatch, getState, { getFirebase, getFirestore }) => {
+        const firestore = getFirestore();
+        firestore
+            .collection("projects")
+            .doc(id)
+            .update({
+                like: false,
+            })
+            .then(() => {
+                dispatch({ type: "DIS_LIKE_PROJECT", id });
+            })
+            .catch((err) => {
+                dispatch({ type: "DIS_LIKE_PROJECT_ERROR", err });
+            });
+    };
+};
+
+export const deleteProject = (id) => {
+    return (dispatch, getState, { getFirebase, getFirestore }) => {
+        const firestore = getFirestore();
+        firestore
+            .collection("projects")
+            .doc(id)
+            .delete()
+            .then(() => {
+                dispatch({ type: "DELETE_PROJECT", id });
+            })
+            .catch((err) => {
+                dispatch({ type: "DELETE_PROJECT_ERROR", err });
+            });
+    };
+};
